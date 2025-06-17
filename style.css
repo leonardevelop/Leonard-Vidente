@@ -1,0 +1,138 @@
+/* ================================
+         CONTENIDO PRINCIPAL
+================================ */
+
+/* Logo centrado */
+#hero {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Banner de texto */
+.banner-text {
+    padding: 0 30px;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Saudagar";
+    z-index: 2;
+    position: relative;
+}
+
+.bannerSketsa {
+    font-family: "Saudagar";
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    animation: escribir 3s steps(40) forwards;
+    font-size: 14px;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #efc743;
+    position: relative;
+    margin-top: 40px;
+}
+
+@keyframes escribir {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.banner-text span {
+    color: #f4b71d;
+}
+
+.banner-text h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1cm;
+    color: goldenrod;
+    margin-top: -30px !important; 
+}
+
+.parrafo1,
+.parrafo2 {
+    font-family: 'Roboto', sans-serif; /* Usa Roboto para párrafos */
+    font-size: 14px;
+    margin-top: 40px;
+    font-weight: 500; /* Aumenta el grosor */
+    color: #fff;
+    text-align: center; /* Puedes mantenerlo centrado si prefieres */
+    line-height: 1.4; /* Ajusta la altura de las líneas */
+    max-width: 600px; /* Ancho máximo para el párrafo */
+    margin: 0 auto; /* Centra el párrafo */
+    padding: 0 20px; /* Añade un poco de espacio a los lados */
+}
+
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        margin-top: 10;
+    }
+
+    .banner-text h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+/* ================================
+       ESTILOS RESPONSIVOS
+================================ */
+@media (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+    display: block;
+  }
+
+  main {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+    .banner-text h1 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10;
+    }
+
+    .banner-text h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .parrafo1,
+    .parrafo2{
+      font-size: 20px;
+      font-weight: 100;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+

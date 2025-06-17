@@ -1,0 +1,94 @@
+/* ================================
+     MENUESTILO DEL H3 - ACTUALIZACIÓN
+================================ */
+
+.update-date {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: -35px;
+}
+
+.update-date h3 {
+    font-size: 14px;
+    color: #fffcfc;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(19, 25, 39, 0.5);
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* ================================
+         SECCIÓN DE TESTIMONIOS
+================================ */
+
+.testimonials-section {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: auto;
+    margin-top: -50px; /* Mantiene esta distancia respecto a la navbar */
+    margin-bottom: -30px; /* Usa un valor negativo para acercarlo al footer */
+    padding: 40px 20px 20px; /* Reduce el padding inferior si es necesario */
+    background-color: #848690;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(243, 243, 243, 0.4);
+}
+
+.testimonial-container h2 {
+    font-size: 24px;
+    color: #003c8b;
+    border-bottom: 2px solid #044e8a;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-container p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #044e8a;
+    line-height: 1.8;
+}
+
+.testimonial-item footer {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* ================================
+       ESTILOS RESPONSIVOS
+================================ */
+@media (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+    display: block;
+  }
+
+  main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important; /* Asegura uso total del ancho */
+  }
+  
+}
+
+
+

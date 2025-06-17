@@ -1,0 +1,104 @@
+/* ================================
+   RESET Y BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  overflow-y: scroll; /* Fuerza siempre la barra de scroll, aunque no haya contenido que lo necesite */
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+  font-family: "Sketsa";
+  src: url(fonts/Sketsa.ttf);
+}
+
+@font-face {
+  font-family: "Saudagar";
+  src: url(fonts/Saudagar.ttf);
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+}
+
+/* ================================
+   MAGIC
+================================ */
+
+#toggle-audio {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#toggle-audio:hover {
+  color: #ccc;
+}
+
+/* ================================
+   LAYOUT BASE CON SCROLL
+================================ */
+
+body.index-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 1.5rem;
+}
+
+/* ================================
+           NAVIGATION
+================================ */
+#navbar.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #213a52 !important; /* Color de fondo (azul oscuro) */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.nav-menu .nav-item {
+  margin: 0 15px;
+}
+
+.nav-menu .nav-link {
+  font-size: 14px;
+  color: #d1d5d6 !important; /* Texto claro */
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active {
+  color: #3498db !important; /* Azul brillante al pasar el mouse */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra suave */
+  transition: 0.3s;
+}

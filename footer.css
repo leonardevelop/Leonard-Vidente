@@ -1,0 +1,49 @@
+
+/* ================================
+   FOOTER CENTRADO
+================================ */
+.footer {
+  flex-shrink: 0;
+  height: 40px;
+  background-color: #213a52;
+   transition: background-color 0.3s ease;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+    display: block;
+  }
+
+  main {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .footer {
+    height: 45px;
+    font-size: 12px;
+    background-color: #213a52;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
