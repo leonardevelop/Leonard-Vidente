@@ -1,0 +1,117 @@
+/* ================================
+   Estilos Exclusivos del Navbar (Estilo Leonard Vidente - VERSIÓN ULTRA-COMPACTA FINAL)
+================================ */
+#main-navbar.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.2rem 2rem;
+  transition: all 0.5s ease;
+  background: rgba(18, 5, 30, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: none; /* Ya quitada la línea inferior general de la barra */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    color: #e0cde6 !important;
+    font-size: 1.8rem;
+    letter-spacing: 1.8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none !important; /* ¡AJUSTADO! Quita el subrayado predeterminado */
+}
+.navbar-brand:hover,
+.navbar-brand:focus, /* ¡AJUSTADO! Añadido :focus y :active para consistencia */
+.navbar-brand:active {
+    color: #fff !important;
+    transform: translateY(-2px);
+    text-decoration: none !important; /* ¡AJUSTADO! Quita el subrayado al pasar el ratón/enfocar */
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: #c0b0c9 !important;
+  font-weight: 600;
+  padding: 0.4rem 1.3rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(170, 102, 255, 0.1) !important;
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: rgba(170, 102, 255, 0.25) !important;
+    text-decoration: none !important;
+}
+
+/* Efecto de línea sutil debajo de los enlaces al pasar el ratón o estar activo */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a044ff;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+
+.navbar-toggler {
+    border: 1px solid rgba(170, 102, 255, 0.4);
+    border-radius: 5px;
+    padding: 0.25rem 0.75rem;
+    transition: all 0.3s ease;
+}
+.navbar-toggler:hover {
+    background-color: rgba(170, 102, 255, 0.1);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224, 205, 230, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Estilos para el menú desplegable en móvil */
+@media (max-width: 991.98px) {
+    #main-navbar.navbar {
+        padding: 0.5rem 1rem;
+    }
+    .navbar-collapse {
+        background: rgba(30, 0, 50, 0.98);
+        border-radius: 12px;
+        margin-top: 10px;
+        padding: 1.5rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+    }
+    .navbar-nav .nav-link::after {
+        bottom: -8px;
+    }
+}
