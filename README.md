@@ -1,2 +1,0 @@
-# Leonard-Vidente
-Web
