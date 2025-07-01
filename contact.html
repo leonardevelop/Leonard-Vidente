@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contacto - Leonard Vidente</title>
+    <meta name="description" content="Formula tu consulta y envíala al éter. Estoy aquí para escucharte y ofrecerte guía espiritual.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/stylecontact.css" />
+
+    <script src="https://kit.fontawesome.com/97d5bea3e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="contact-page">
+
+    <canvas id="particle-canvas"></canvas>
+
+    <header id="navbar-placeholder"></header>
+
+    <main class="content-wrapper" id="contact-container">
+        <div class="oracle-section" id="oracle-section">
+            <div class="oracle-glow"></div>
+            <h1 class="page-title">Contacta al Oráculo</h1>
+            <p class="page-subtitle">Formula tu consulta y envíala al éter. Estoy aquí para escucharte.</p>
+            <button class="cta-button" id="start-consultation">Iniciar Consulta</button>
+            <div class="social-links-oracle">
+                <a href="https://www.instagram.com/leonardvidente/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/leonardvidente/" target="_blank" class="social-icon"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+
+        <div class="form-section" id="form-section">
+            <div class="form-container">
+                 <button id="close-form" class="close-button">&times;</button>
+                 <h2 class="form-title">Portal de Mensajes</h2>
+                <form action="https://formspree.io/f/myzjobep" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Tu Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                         <label for="email">Tu Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                         <label for="message">Tu Mensaje</label>
+                    </div>
+                    <button type="submit" class="form-button">Enviar al Universo</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script> </body>
+</html>

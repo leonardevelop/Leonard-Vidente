@@ -1,0 +1,202 @@
+/* =================================
+   Estilos de la Página de Contacto
+================================= */
+
+:root {
+    --purple-glow: rgba(170, 102, 255, 0.7);
+    --purple-dark: #0f001a;
+    --purple-medium: #3c096c;
+    --purple-light: #e0cde6;
+    --gold-light: #ffeea6;
+}
+
+body.contact-page { 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background: linear-gradient(to bottom, #0f001a, #1a002e);
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.page-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--purple-light);
+    text-shadow: 0 0 15px var(--purple-glow);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #c0b0c9;
+}
+
+/* Oráculo Interactivo */
+.oracle-section {
+    text-align: center;
+    /* MODIFICADO: Cambiado display: block por defecto */
+    display: block; 
+}
+
+/* MODIFICADO: Ahora oculta completamente la sección del oráculo */
+#contact-container.form-active .oracle-section {
+    display: none;
+}
+
+.oracle-glow {
+    display: none; /* Mantenemos el brillo del círculo oculto como pediste */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #6a3093, var(--purple-medium));
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(160, 68, 255, 0.4);
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px var(--purple-glow);
+}
+
+.social-links-oracle { margin-top: 2rem; }
+.social-icon { color: #c0b0c9; font-size: 1.5rem; margin: 0 1rem; transition: all 0.3s ease; }
+.social-icon:hover { color: #fff; transform: scale(1.2); }
+
+/* Sección del Formulario */
+.form-section {
+    /* MODIFICADO: Eliminado el posicionamiento absoluto */
+    /* position: absolute; top: 50%; left: 50%; transform: ... */
+    
+    /* MODIFICADO: Oculto por defecto con display: none */
+    display: none;
+    width: 90%; 
+    max-width: 450px;
+    animation: fadeIn 0.5s ease-in-out; /* NUEVO: Una animación simple de aparición */
+}
+
+/* NUEVO: Definición de la animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MODIFICADO: Ahora muestra el formulario como un bloque */
+#contact-container.form-active .form-section {
+    display: block;
+    pointer-events: auto;
+}
+
+.form-container {
+    position: relative;
+    background: rgba(15, 0, 26, 0.7);
+    border: 1px solid var(--purple-medium);
+    border-radius: 15px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #a093b1;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close-button:hover { color: #fff; }
+
+.form-title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: var(--purple-light);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--purple-medium);
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    color: #8c7d99;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: -1rem;
+    font-size: 0.8rem;
+    color: var(--gold-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--gold-light);
+}
+
+.form-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6a3093, var(--purple-medium));
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.form-button:hover {
+    box-shadow: 0 0 20px var(--purple-glow);
+}

@@ -1,0 +1,107 @@
+/* ================================
+   PÁGINA DE TESTIMONIOS (stylestory.css)
+================================ */
+
+:root {
+    --purple-glow: rgba(170, 102, 255, 0.7);
+    --purple-dark: #0f001a;
+    --purple-medium: #3c096c;
+    --purple-light: #e0cde6;
+    --gold-light: #ffeea6;
+}
+
+/* Estilo base de la página para consistencia */
+body.story-page {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, var(--purple-dark), #1a002e);
+    color: var(--purple-light);
+    padding-top: 80px; /* Espacio para la barra de navegación fija */
+    margin: 0;
+}
+
+.story-main {
+    padding: 2rem 0;
+}
+
+/* Títulos de la página */
+.page-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--purple-light);
+    text-shadow: 0 0 15px var(--purple-glow);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #c0b0c9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor del Carrusel Swiper */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 340px;
+    height: auto;
+}
+
+.swiper-slide .testimonial-card {
+    height: 100%;
+}
+
+/* Tarjeta de Testimonio */
+.testimonial-card {
+    position: relative;
+    background: rgba(15, 0, 26, 0.6);
+    border: 1px solid var(--purple-medium);
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #d1c5e0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2rem;
+    color: var(--purple-medium);
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--gold-light);
+    font-style: normal;
+}
+
+/* Paginación de Swiper */
+.swiper-pagination-bullet {
+    background-color: var(--purple-medium);
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--purple-light);
+    opacity: 1;
+}
